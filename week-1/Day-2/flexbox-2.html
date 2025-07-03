@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex flow</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: inline-flex;
+            flex-flow: row nowrap;
+            flex: 1 1 auto;
+            border: 1px solid black;
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+
+        aside {
+            flex: 1 0 auto;
+            height: 100vh;
+            background-color: lightcoral;
+            margin: 8px;
+        }
+
+        main{
+            flex: 2 1 auto;
+            height: 100vh;
+            background-color: lightblue;
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside>Sidebar</aside>
+        <main>Main</main>
+    </div>
+</body>
+
+</html>

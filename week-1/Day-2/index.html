@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #menu {
+            display: block;
+            width: 80%;
+            margin: auto;
+            background-color: black;
+             color: rgb(251, 244, 243);
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+         #menu .menu-item {
+            display: inline-block;
+            width: 19%;
+         }
+
+         li[class="menu-item"]:hover {
+            background-color: lightgray;
+            color: black;
+         }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="menu-item">HTML</li>
+        <li class="menu-item">CSS</li>
+        <li class="menu-item">JAVA</li>
+        <li class="menu-item">DATABASE</li>
+        <li class="menu-item">DEVOPS</li>
+    </ul>
+</body>
+</html>
