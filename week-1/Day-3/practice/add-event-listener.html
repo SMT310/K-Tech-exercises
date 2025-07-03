@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener</title>
+</head>
+
+<body>
+    <button id="timeBtn">Display Time</button>
+    <p id="result"></p>
+
+    <button id="myBtn">Click me</button>
+    <p id="result1"></p>
+    <script>
+        let myBtn = document.getElementById("myBtn");
+        myBtn.addEventListener("click", function () {
+            document.getElementById("result1").innerHTML += "Button was clicked!<br>";
+        });
+        myBtn.addEventListener("mouseover", function () {
+            document.getElementById("result1").innerHTML += "Mouse is over the button!<br>";
+        });
+        myBtn.addEventListener("mouseout", function () {
+            document.getElementById("result1").innerHTML += "Mouse is out of the button!<br>";
+        });
+
+        document.getElementById("timeBtn").addEventListener("click", function () {
+            const currentTime = new Date().toLocaleTimeString();
+            document.getElementById("result").innerText = "Current Time: " + currentTime;
+        });
+    </script>
+</body>
+
+</html>

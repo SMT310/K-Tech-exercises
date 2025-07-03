@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h2>Personal Information</h2>
+    <div class="container">
+        <form name="accountForm" method="GET" action="result.html" onsubmit="return validationForm() ">
+            Score(0-100):
+            <input type="number" name="score" min="0" max="100" /><br /><br />
+            Country code:
+            <input type="text" name="countryCode" title="Two letter country code" /><br /><br />
+            Username: <input type="text" name="username" required /><br /><br />
+            Password: <input type="password" name="password" title="8 or more characters, at least one number,
+            one uppercase and lowercase letter" required><br /><br />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validationForm() {
+            let form = document.forms['accountForm'];
+            let score = form['score'].value;
+            let countryCode = form['countryCode'].value;
+            let username = form['username'].value;
+            let password = form['password'].value;
+
+            if (score < 0 || score > 100) {
+                alert("Score must be between 0 and 100.");
+                return false;
+            } else if (!/^[A-Za-z]{2}$/.test(countryCode)) {
+                alert("Country code must be two letters.");
+                return false;
+            } else if (username == "") {
+                alert("Username is required.");
+                accountForm.username.focus();
+                return false;
+            } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}/.test(password)) {
+                alert("Password must be at least 8 characters long, with at least one number, one uppercase and one lowercase letter.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

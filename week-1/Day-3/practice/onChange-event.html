@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange Event</title>
+</head>
+<body>
+    <label for="fullName">Enter your full name: </label>
+    <input type="text" id="fullName" onChange="getUpperCaseValue()" />
+
+    <script>
+        function getUpperCaseValue() {
+            const fullNameInput = document.getElementById("fullName");
+            fullNameInput.value = fullNameInput.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

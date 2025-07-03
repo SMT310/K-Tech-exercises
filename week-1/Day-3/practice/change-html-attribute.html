@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML attributes</title>
+</head>
+
+<body>
+    <img src="https://www.w3schools.com/js/smiley.gif" alt="Smiley GIF" id="myImage" />
+    <br />
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+        function changeImage() {
+            document.getElementById("myImage").src =
+                "https://www.w3schools.com/js/landscape.jpg";
+        }
+    </script>
+</body>
+
+</html>

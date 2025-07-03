@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace current element</title>
+</head>
+
+<body>
+    <div id="firstDiv">
+        <p id="p1">This is first paragraph</p>
+        <p id="p2">This is second paragraph</p>
+    </div>
+    <button onclick="replaceFirstParagraph()">Replace first paragraph</button>
+
+    <script>
+        function replaceFirstParagraph() {
+            let firstDiv = document.getElementById("firstDiv");
+            let firstParagraph = document.getElementById("p1");
+            let newParagraph = document.createElement("p");
+            let newTextNode = document.createTextNode("This is the new paragraph");
+            newParagraph.appendChild(newTextNode);
+            firstDiv.replaceChild(newParagraph, firstParagraph);
+        }
+    </script>
+</body>
+
+</html>

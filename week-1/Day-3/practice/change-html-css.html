@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML attributes</title>
+</head>
+
+<body>
+    <p id="greeting">Hello</p>
+    <button onclick="hiddenText()">Hidden Text</button>
+    <button onclick="removeText()">Remove Text</button>
+    <button onclick="displayText()">Display Text</button>
+    <button onclick="recoverText()">Recover Text</button>
+
+    <script>
+        function hiddenText(){
+            document.getElementById("greeting").style.visibility = "hidden";
+        }
+        function removeText(){
+            document.getElementById("greeting").style.display = "none";
+        }
+        function displayText(){
+            document.getElementById("greeting").style.visibility = "visible";
+        }
+        function recoverText(){
+            document.getElementById("greeting").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

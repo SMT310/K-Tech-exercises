@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event</title>
+    <style>
+        #myDiv {
+            background-color: coral;
+            border: 1px solid black;
+            padding: 50px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv">
+        <p>Hover mouse on orange background to generate random number</p>
+        <p>Click button to remove event listener</p>
+        <button onclick="removeEvent()" id="myBtn">Remove Event</button>
+    </div>
+
+    <p id="result"></p>
+    <script>
+        document.getElementById("myDiv").addEventListener("mousemove", randomNumber);
+
+        function randomNumber() {
+            document.getElementById("result").innerHTML = Math.random();
+        }
+
+        function removeEvent() {
+            document.getElementById("myDiv").removeEventListener("mousemove", randomNumber);
+            document.getElementById("result").innerHTML = "Event removed";
+        }
+    </script>
+</body>
+
+</html>
